@@ -39,10 +39,6 @@
 	});
 
 	window.addEventListener('touchmove', function (e) {
-		ctx.addEventListener("touchstart",  function(event) {event.preventDefault()})
-		ctx.addEventListener("touchmove",   function(event) {event.preventDefault()})
-		ctx.addEventListener("touchend",    function(event) {event.preventDefault()})
-		ctx.addEventListener("touchcancel", function(event) {event.preventDefault()})
 		draw(e.pageX, e.pageY);
 	});
 
