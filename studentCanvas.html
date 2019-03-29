@@ -40,7 +40,7 @@
 
 	document.getElementById("canvas").addEventListener('touchmove', function (e) {
 		draw(e.pageX, e.pageY);
-	});
+	}, false);
 
 	window.addEventListener('keyup', function (e) {
 		if (e.keyCode == 66) {
@@ -72,7 +72,7 @@
 		}
 	});
 
-	window.addEventListener('keyup', function (e) {
+window.addEventListener('keyup', function (e) {
 		if (e.keyCode == 32){
 			const context = canvas.getContext('2d');
 			context.clearRect(0, 0, canvas.width, canvas.height);
@@ -83,7 +83,8 @@ window.addEventListener("orientationchange", function(e) {
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 });
 
-
+var c = document.querySelector("#red");
+console.log(c)
 
 // 	ctx.fillStyle = 'green';
 // 	ctx.fillRect(200, 200, 100, 100);
@@ -157,6 +158,7 @@ window.addEventListener("orientationchange", function(e) {
 //
 // }
 </script>
-
+<input type="color" value="#FF0000" id="red">
+2
 </body>
 </html>
